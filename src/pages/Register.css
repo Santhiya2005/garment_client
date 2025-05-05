@@ -1,0 +1,17 @@
+
+img {
+    max-height:fit-content;
+    object-fit: cover;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .flex {
+      flex-direction: column;
+    }
+  
+    .flex-1 {
+      width: 100%;
+    }
+  }
+  

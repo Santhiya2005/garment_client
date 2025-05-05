@@ -1,0 +1,52 @@
+/* Video banner styling */
+.company-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  animation: fadeIn 2s ease-in-out;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .company-name {
+    font-size: 4rem;
+  }
+}
+
+/* Optional animation for fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fallback banner image style */
+.banner-image {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1023px) {
+  .banner-image {
+    display: none;
+  }
+}
+
+/* Category card hover effects */
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
