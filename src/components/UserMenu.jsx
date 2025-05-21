@@ -99,6 +99,7 @@ const UserMenu = ({ close }) => {
         <Link onClick={handleClose} to="/dashboard/address" className={itemClasses}>
           Save Address
         </Link>
+        {isAdmin(user.role) && (
         <a
           href="https://garment-analysis-1.onrender.com"
           target="_blank"
@@ -107,6 +108,7 @@ const UserMenu = ({ close }) => {
         >
           Analysis
         </a>
+        )}
         <button onClick={handleLogout} className={itemClasses}>
           Log Out
         </button>

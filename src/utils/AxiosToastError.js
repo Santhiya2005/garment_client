@@ -1,9 +1,12 @@
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
 
-const AxiosToastError = (error)=>{
-    toast.error(
-        error?.response?.data?.message
-    )
-}
+const AxiosToastError = (error) => {
+    const message =
+        error?.response?.data?.message ||
+        error?.message ||
+        "Something went wrong. Please try again.";
 
-export default AxiosToastError
+    toast.error(message);
+};
+
+export default AxiosToastError;
